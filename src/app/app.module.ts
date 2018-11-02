@@ -7,25 +7,35 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list'
 
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
+import { DishdetailComponent } from './menu/dishdetail/dishdetail.component';
 
 // decorators it's function which modify JS classes 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent              // declare that this view Class belong to this particular module
+    MenuComponent,
+    DishdetailComponent              // declare that this view Class belong to this particular module
   ],
   imports: [                  //need to be used with AppModule
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
     FlexLayoutModule,
+
+    MatToolbarModule,    
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
     MatListModule
   ],
   providers: [],              // specify which modules it will use

@@ -18,13 +18,18 @@ import { from } from 'rxjs';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { DishService } from './services/dish.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 // decorators it's function which modify JS classes 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DishdetailComponent              // declare that this view Class belong to this particular module
+    DishdetailComponent,
+    HeaderComponent,
+    FooterComponent              // declare that this view Class belong to this particular module
   ],
   imports: [                  //need to be used with AppModule
     BrowserModule,
@@ -38,7 +43,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     MatButtonModule,
     MatListModule
   ],
-  providers: [],              // specify which modules it will use
+  providers: [DishService],              // specify which modules it will use
   bootstrap: [AppComponent]   // bootstrap AppComponent(root component)
 })
 export class AppModule { }

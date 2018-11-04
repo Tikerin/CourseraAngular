@@ -17,7 +17,7 @@ import { from } from 'rxjs';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
-import { DishdetailComponent } from './menu/dishdetail/dishdetail.component';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 // decorators it's function which modify JS classes 
 @NgModule({
